@@ -4,4 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastapi>=0.139.0",
+    "google-genai>=2.11.0",
+    "platformdirs>=4.10.0",
+    "pydantic-settings[toml]>=2.14.2",
+    "scalar-fastapi>=1.8.2",
+    "sqlite-vec>=0.1.9",
+    "sqlmodel>=0.0.39",
+    "uvicorn>=0.51.0",
+]
