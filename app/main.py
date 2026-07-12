@@ -4,7 +4,7 @@ from scalar_fastapi import get_scalar_api_reference
 from contextlib import asynccontextmanager
 
 from app.core.config import settings
-from app.api.routes import router
+from app.api import routes
 from app.db.database import create_db_and_tables
 
 @asynccontextmanager
@@ -31,7 +31,7 @@ app.add_middleware(
 )
 
 # Include the API router with a prefix for versioning
-app.include_router(router, prefix="/api/v1")
+app.include_router(routes.router)
 
 @app.get("/")
 async def root():
